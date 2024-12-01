@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-section {
+    background-image: url('./images/image-product-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.content-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-title {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: hsl(212, 21%, 14%);
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: hsl(228, 12%, 48%);
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.current-price {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: hsl(158, 36%, 37%);
+    margin-right: 15px;
+}
+
+.original-price {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart img {
+    margin-right: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: hsl(158, 36%, 30%);
+}
+
+.attribution {
+    position: fixed;
+    bottom: 1px;
+    font-size: 10px;
+    padding-bottom: 20px;
+
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .image-section {
+        background-image: url('./images/image-product-mobile.jpg');
+        height: 250px;
+    }
+    .attribution{
+        position: fixed;
+        bottom: 1px;
+        font-size: 10px;
+    }
+}
